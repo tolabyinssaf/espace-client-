@@ -1,0 +1,167 @@
+.client-layout {
+    display: flex;
+    min-height: 100vh;
+    min-height: 100dvh;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #edf4fe 0%, #f6faff 100%);
+    color: #1b2a4a;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    height: 64px;
+    padding: 0 28px;
+    background: #ffffff;
+    border-bottom: 1px solid #e6edf7;
+    box-sizing: border-box;
+}
+
+.topbar-logo {
+    display: none;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-left: auto;
+}
+
+.topbar-bell {
+    position: relative;
+    display: flex;
+    padding: 4px;
+    border: none;
+    background: none;
+    color: #1e4f9c;
+    cursor: pointer;
+}
+
+.topbar-bell-dot {
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    width: 8px;
+    height: 8px;
+    background: #e53935;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+
+.topbar-user-wrap {
+    position: relative;
+}
+
+.topbar-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: 0.82rem;
+    color: #1b2a4a;
+    cursor: pointer;
+}
+
+.topbar-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #5aa9e6, #1e6fe0);
+    color: #ffffff;
+}
+
+.topbar-menu-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 950;
+}
+
+.topbar-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 960;
+    min-width: 190px;
+    padding: 6px;
+    background: #ffffff;
+    border: 1px solid #e6edf7;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 40, 100, 0.14);
+}
+
+.topbar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #1b2a4a;
+    font-size: 0.84rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.topbar-menu a:hover {
+    background: #f0f6fe;
+}
+
+.topbar-menu a.danger {
+    color: #e53935;
+}
+
+.page-content {
+    flex: 1;
+    padding: 24px 28px;
+}
+
+@media (max-width: 1024px) {
+    .topbar {
+        padding: 0 16px;
+    }
+
+    .topbar-logo {
+        display: block;
+    }
+
+    .topbar-logo .logo-img {
+        width: 92px;
+    }
+
+    .topbar-user-name {
+        display: none;
+    }
+
+    .page-content {
+        padding: 18px 16px calc(110px + env(safe-area-inset-bottom, 0px));
+    }
+}
+
+@media (max-width: 640px) {
+    .client-layout {
+        overflow-x: clip; 
+    }
+
+    .page-content {
+        padding: 0 0 calc(104px + env(safe-area-inset-bottom, 0px));
+    }
+}

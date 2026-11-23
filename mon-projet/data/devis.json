@@ -1,0 +1,28 @@
+{
+  "devis": [
+    {
+      "id": 1,
+      "numero": "DEV-2026-001",
+      "produit": "Assurance Auto",
+      "date": "2026-09-05",
+      "montant": 4500,
+      "statut": "En attente"
+    },
+    {
+      "id": 2,
+      "numero": "DEV-2026-002",
+      "produit": "Assurance Habitation",
+      "date": "2026-09-02",
+      "montant": 2300,
+      "statut": "Accepté"
+    },
+    {
+      "id": 3,
+      "numero": "DEV-2026-003",
+      "produit": "Mutuelle Santé",
+      "date": "2026-08-28",
+      "montant": 1800,
+      "statut": "Refusé"
+    }
+  ]
+}
